@@ -10,7 +10,9 @@ import requests as re
 # 取得コード
 code = ['9984', '7817', '9946']
 comp_name = ['ソフトバンクグループ（株）', 'パラマウントベッドホールディングス（株）', 'ミニストップ（株）']
-
+TESTTOKEN = 'BQedVjJhi5yGcg4Cdq6uUgnCQGcRhufYfAhlf0IRSjN'
+PRODTOKEN = 'FvgP8wTGdNVpEbMJjPnIXM9NcNJEePtFCFgmEV9FnlL'
+    
 s_year = 1 # 取得年数
 s_month = 1
 s_day = 1 # 取得単位
@@ -62,8 +64,7 @@ def main():
     df["datetime"] = pd.to_datetime(df.timestamp, unit="ms") #timestamp変換
     df.head()
 
-    TESTTOKEN = 'BQedVjJhi5yGcg4Cdq6uUgnCQGcRhufYfAhlf0IRSjN'
-    PRODTOKEN = 'FvgP8wTGdNVpEbMJjPnIXM9NcNJEePtFCFgmEV9FnlL'
+    
         
     headers = {
         'Authorization' : 'Bearer ' + PRODTOKEN
